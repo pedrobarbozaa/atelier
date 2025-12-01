@@ -4,6 +4,7 @@ import "./Navigation.css"
 function Navigation() {
   return (
     <nav className="navigation">
+      <NavLink href="/escola">A escola</NavLink>
       <NavLink href="/ferramentas">Ferramentas</NavLink>
       <NavLink href="/projetos">Projetos</NavLink>
       <NavLink href="/recursos">Recursos</NavLink>
