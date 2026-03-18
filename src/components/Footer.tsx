@@ -1,5 +1,6 @@
 import FooterSection from "./FooterSection"
 import "./Footer.css"
+import Logo from "./Logo"
 
 function Footer() {
   return (
@@ -7,9 +8,9 @@ function Footer() {
       <div className="footer-container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <h3 className="footer-title">Atelier Toolkit</h3>
+            <Logo />
             <p className="footer-description">
-              Suas ferramentas essenciais para corte e costura, organizadas em um só lugar.
+              Esse site é um oferecimento de <br /> Maria Fatima - Escola de corte e costura.
             </p>
           </div>
 

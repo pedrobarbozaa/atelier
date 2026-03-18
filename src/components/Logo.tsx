@@ -1,13 +1,9 @@
 import "./Logo.css"
 
-interface LogoProps {
-  text?: string
-}
-
-function Logo({ text = "Atelier Toolkit" }: LogoProps) {
+function Logo() {
   return (
     <div className="logo">
-      <span className="logo-text">{text}</span>
+      <span className="logo-text">Estojo da Ligia</span>
     </div>
   )
 }

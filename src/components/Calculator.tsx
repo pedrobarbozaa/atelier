@@ -12,8 +12,8 @@ const Calculator = () => {
 
   const placeholders: Record<MeasureType, string> = {
     select: "",
-    circunference: "Medida da cintura (cm)",
-    radius: "Medida do raio (cm)",
+    circunference: "Medida do raio (cm)",
+    radius: "Medida da circunferência (cm)",
     clothsize: "Medida da cintura (cm)",
     hook: "Medida do quadril (cm)",
   }
@@ -34,10 +34,10 @@ const Calculator = () => {
 
     switch (measureType) {
       case "circunference":
-        calculatedResult = value / Math.PI // precisa do raio
+        calculatedResult = 2 * Math.PI * value // precisa do raio
         break
-      case "radius":
-        calculatedResult = 2 * Math.PI * value // precisa da cintura
+        case "radius":
+          calculatedResult = value / (2 * Math.PI) // precisa da circunferência
         break
       case "clothsize":
         calculatedResult = value * 3 // precisa da cintura
@@ -60,10 +60,10 @@ const Calculator = () => {
         onChange={(e) => handleMeasureChange(e.target.value as MeasureType)}
       >
         <option value="select" selected disabled>Selecione a medida</option>
-        <option value="circunference">Circunferência</option>
-        <option value="radius">Raio</option>
         <option value="clothsize">Tecido para prega</option>
         <option value="hook">Gancho</option>
+        <option value="circunference">Circunferência</option>
+        <option value="radius">Raio</option>
       </select>
 
       <form className="calculator-form" onSubmit={handleSubmit}>
